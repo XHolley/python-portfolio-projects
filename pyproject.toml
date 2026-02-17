@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "job-application-tracker"
+version = "0.1.0"
+description = "A portfolio-ready CLI app to track job applications and generate pipeline insights."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Zay" }]
+license = { text = "MIT" }
+keywords = ["python", "cli", "sqlite", "portfolio", "job search"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent"
+]
+
+[project.scripts]
+jobtracker = "jobtracker.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "personal-finance-analyzer"
+version = "0.1.0"
+description = "Portfolio-ready personal finance analyzer with CSV ingestion, auto-categorization, charts, and budget alerts."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Zay" }]
+license = { text = "MIT" }
+keywords = ["python", "finance", "analytics", "cli", "portfolio"]
+
+[project.scripts]
+finance-analyzer = "finance_analyzer.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
